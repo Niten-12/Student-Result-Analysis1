@@ -1,0 +1,326 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  color: #333;
+}
+
+/* Navbar Styling */
+.custom-navbar {
+  display: flex; /* Changed to flex to easily align items */
+  justify-content: space-between; /* Ensures space between logo and logout */
+  align-items: center; /* Centers items vertically */
+  background-color: #004a99;
+  padding: 10px 20px;
+  border-radius: 15px;
+  position: fixed;
+  width: 98%;
+}
+
+.custom-navbar .navbar-brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.custom-navbar .logout-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-navbar .logout-btn:hover {
+  background-color: #c0392b;
+}
+/* Style the form labels */
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #004a99;
+  padding-left: 38%;
+}
+
+/*
+  /* Form Styling for single row */
+#student-form {
+  display: flex; /* Flexbox for single row layout */
+  flex-wrap: wrap; /* Allows wrapping */
+  justify-content: space-between; /* Distributes space between inputs */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Softened the shadow */
+  width: 100%; /* Full width */
+}
+.form-group.row {
+  display: flex; /* Ensures the items are aligned in a row */
+  justify-content: space-between; /* Creates equal spacing between the items */
+}
+
+.form-group.row .col-sm-4 {
+  flex: 1; /* Each form element takes up equal space */
+  padding: 0 10px; /* Adds horizontal spacing between the elements */
+}
+
+.form-group {
+  flex: 1 1 20%; /* Flex grow, flex shrink, and basis */
+  padding: 0 10px; /* Spacing between form inputs */
+}
+
+/* Adjust label and input alignment */
+label {
+  display: block; /* Ensure label is above input */
+  font-size: 14px;
+  color: #333;
+}
+
+.form-control {
+  width: 100%; /* Ensure full width within column */
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  border-color: #004a99;
+  outline: none;
+}
+.form-group.submit-button {
+  flex: 0 100%; /* Takes full width to ensure alignment */
+  display: flex; /* Enables flexbox for inner content */
+  justify-content: flex-end; /* Aligns button to the right */
+}
+button.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-primary {
+  background-color: #004a99;
+  color: white;
+}
+
+button.btn-primary:hover {
+  background-color: #003d80;
+}
+
+/* Dynamic Table Styling */
+#dynamic-table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures the borders of cells are collapsed */
+  margin-bottom: 20px;
+  border-radius: 10px; /* Rounded corners for the table */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect around the table */
+  overflow: hidden; /* Ensures the border-radius is applied correctly */
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #004a99;
+  color: white;
+  border-radius: 10px 10px 0 0; /* Add specific radius to top corners of the header */
+}
+
+table td {
+  background-color: #f9f9f9;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Alerts */
+.alert {
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+/* Optional: styling for the first and last td elements in each row to match the radius of the table */
+table tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+
+table tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Center the modal in the middle of the screen */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  overflow: auto; /* Enable scroll if needed */
+}
+/* Modal content - White box in the middle */
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 190%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+#modal-header {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Add some space between items */
+  padding: 10px;
+  flex-wrap: wrap; /* Ensures that if there are too many items, they will wrap */
+}
+
+/* Optional: Style for individual items in the modal header */
+#modal-header p {
+  margin: 0; /* Remove margin from paragraphs to ensure clean alignment */
+  padding: 0;
+  font-size: 14px; /* Adjust font size as per your preference */
+}
+
+/* Close button in the modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Footer styling for modal buttons */
+.modal-footer {
+  text-align: right;
+  margin-top: 20px;
+}
+/* Card Container */
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  margin-top: 20px;
+}
+
+/* Card styling */
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px; /* Card width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Card content */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Responsive cards for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
